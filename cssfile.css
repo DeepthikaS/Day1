@@ -1,0 +1,22 @@
+*{
+    
+    font-size: 25px;
+}
+
+#mydiv{
+    background-image: url("https://cdn.wallpapersafari.com/45/21/oKrNfj.jpg");
+    text-align:justify;
+    border: 5px outset black;
+    height: 725px;
+    padding-left: 50px;
+}
+
+#heading{
+       font-size: 50px;
+       text-align: center;
+       
+    }
+
+#btn{
+    margin-right: 20px;
+}
