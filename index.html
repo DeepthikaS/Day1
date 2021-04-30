@@ -1,53 +1,75 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Day1</title>
-        <link type="text/css" rel="stylesheet" href="cssfile.css">
+        <title>Registration Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="cssfile.css">
     </head>
-    <body>
-        <div id="mydiv">
-            <i><h2 id="heading">Registration Form</h2></i>
-            <br>
-            <form>
-                <b><label for="name" >Name:</label></b>
-                <input name="name" id="name" type="text" placeholder="Enter name" required><br><br>
-
-                <b><label for='dob' >Date of Birth:</label></b>
-                <input name="dob" id="dob" type="date" required><br><br>
-
-                <b><label for="gender" >Gender:</label></b>
-                <input type="radio" name="gender" id="male"  value="male" checked>
-                <b><label for="male" >Male</label></b>
-                <input type="radio" name="gender" id="female" value="female">
-                <b><label for="female" >Female</label></b>
-                <input type="radio" name="gender" id="other" value="other">
-                <b><label for="other" >Other</label></b><br><br>
-
-                <b><label for="country">Country:</label></b>
-                <select name="country" id="country" required>
-                    <option value="Afghanisthan">Afghanisthan</option>
-                    <option value="China">China</option>
-                    <option value="India">India</option> 
-                    <option value="Nepal">Nepal</option>
-                    <option value="New York">New York</option>
-                </select><br><br>
-
-                <b><label for="photo">Upload your photo:</label></b>
-                <input name="photo" id="photo" type="file" placeholder="Select a file" required><br><br>
-
-                <b><label for="ph" >Mobile number:</label></b>
-                <input name="ph" id="ph" type="tel" placeholder="Enter mobile number" required><br><br>
-
-                <b><label for="email" >Email:</label></b>
-                <input name="email" id="email" type="email" placeholder="Enter email" required><br><br>
-
-                <b><label for="pwd" >Enter password:</label></b>
-                <input name="pwd" id="pwd" type="password" required><br><br>
-
-                <input name="btn" id="btn" value="Submit" type="submit">
-                <input name="reset" id="reset" value="Reset" type="reset">
-
+    <body id="body">
+        <div class="container">
+            <div class="jumbotron text-center">
+                <h1 id="heading">Registration Form</h1><br><br>
+            </div>
+            <form onsubmit="return validateForm()" name="form">
+                <div class="form-group">
+                    <b><label for="name">Name:</label></b>
+                    <input type="text" name="name" class="form-control" placeholder="Enter name" id="name" required> 
+                </div>
+                <div class="form-group">
+                    <b><label for="dob">Date of Birth:</label></b>
+                    <input type="date" name="name" class="form-control" " id="dob" required> 
+                </div>
+                <div class="form-group">
+                    <b><label for="gender">Gender:</label><br></b>
+                    <input type="radio" name="gender" id="male"  value="male" checked>
+                    <label for="male" >Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female" >Female</label>
+                    <input type="radio" name="gender" id="other" value="other">
+                    <label for="other" >Other</label>
+                </div>
+                <div class="form-group">
+                    <b><label for="country">Country:</label></br></b>
+                    <select name="country" id="country">
+                        <option value="India">India</option>
+                        <option value="Afghanisthan">China</option>
+                        <option value="China">India</option> 
+                        <option value="Nepal">Nepal</option>
+                        <option value="New York">New York</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <b><label for="addr">Address:</label></b>
+                    <textarea name="addr" class="form-control" id="addr" placeholder="Enter your address" rows="4" cols="50" required></textarea>
+                </div>
+                <div class="form-group">
+                    <b><label for="photo">Upload your photo:</label></b>
+                    <input name="photo" class="form-control" id="photo" type="file" placeholder="Select a file" required>
+                </div>
+                <div class="form-group">
+                    <b><label for="ph" >Mobile number:</label></b>
+                    <input name="ph" class="form-control" id="ph" type="tel" placeholder="Enter mobile number" required>
+                </div>
+                <div class="form-group">
+                    <b><label for="email" >Email:</label></b>
+                    <input name="email" class="form-control" id="email" type="email" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                    <b><label for="pwd" >Enter password:</label></b>
+                    <input name="pwd" class="form-control" id="pwd" type="password" required>
+                </div>
+                <div class="form-group text-center">
+                    <input name="btn" class="btn btn-success" id="btn" value="Submit" type="submit" required>
+                    <input name="reset" class="btn btn-primary" id="reset" value="Reset" type="reset" required>
+                </div>
+  
             </form>
         </div>
+        <script type="text/javascript" src="jsfile.js"></script>
     </body>
 </html>
