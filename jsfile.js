@@ -1,6 +1,6 @@
 function validateForm(){
-    var phno=document.forms["myform"]["ph"].value;
-    var password=document.forms["myform"]["pwd"].value;
+    var phno=document.forms["form"]["ph"].value;
+    var password=document.forms["form"]["pwd"].value;
     if(phno.length!=10 || typeof(phno)!=Number){
         alert("Invalid mobile number");
         return false;
