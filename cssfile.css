@@ -22,3 +22,7 @@
     background-image: url("https://cdn.wallpapersafari.com/45/21/oKrNfj.jpg");
     
 }
+
+.jumbotron text-center{
+    margin:auto;
+}
